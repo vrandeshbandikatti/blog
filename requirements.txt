@@ -3,6 +3,7 @@ langchain
 sentence-transformers
 uvicorn
 ctransformers
+langchain_community
 langchain
 python-box
 streamlit
