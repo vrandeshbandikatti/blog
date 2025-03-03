@@ -11,6 +11,7 @@ def getLlamaresponse(input_text,no_words,blog_style):
         within {no_words} words.
     """
     # generate the response from the Llama2 model
+    prompt=PromptTemplate(input_variables=["blog_style","input_text",'no_words'],template=template)
     response=llm(prompt.format(blog_style=blog_style,input_text=input_text,no_words=no_words))
     print(response)
     return response
