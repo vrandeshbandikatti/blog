@@ -5,10 +5,10 @@ from langchain.llms import CTransformers
 def getLlamaresponse(input_text,no_words,blog_style):
     # Llama2 model
     ### LLama2 model
-    llm=CTransformers(model='llama-2-7b-chat.ggmlv3.q8_0.bin',
+    llm=CTransformers(model='model/llama-2-7b-chat.ggmlv3.q2_K.bin',
                       model_type='llama',
-                      config={'max_new_tokens':256,
-                              'temperature':0.01})
+                      config={'max_new_tokens':300,
+                              'temperature':0.5})
     # Prompt Template
     template="""
         Write a blog for {blog_style} on the topic "{input_text}"
